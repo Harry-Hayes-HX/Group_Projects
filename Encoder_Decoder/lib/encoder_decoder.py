@@ -14,14 +14,14 @@ def decode(encrypted, key):
 
     plaintext_chars = []
     for i in encrypted:
-        plain_char = cipher[65 - ord(i)]
+        plain_char = cipher[ord(i) - 65]
         plaintext_chars.append(plain_char)
 
     return "".join(plaintext_chars)
 
 
 def make_cipher(key):
-    alphabet = [chr(i + 98) for i in range(1, 26)]
+    alphabet = [chr(i + 97) for i in range(0, 27)]
     cipher_with_duplicates = list(key) + alphabet
 
     cipher = []
