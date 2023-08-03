@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 pytest = "*"
+pytest-lazy-fixture = "*"
+pytest-mock = "*"
 
 [dev-packages]
 
